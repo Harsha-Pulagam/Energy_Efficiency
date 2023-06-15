@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request,jsonify
+from src.pipeline.prediction_pipeline import CustomData,PredictPipeline
 
 app = Flask(__name__)
 
@@ -8,26 +9,27 @@ def hello_world():
 
         return render_template('index.html')
     else:
-        '''
+
         data=CustomData(
-        Compactness=float(request.form.get('compactness')),
-        Surface_area = float(request.form.get('surface-area')),
-        Wall_area= float(request.form.get('wall-area')),
-        Roof_area = float(request.form.get('roof-area')),
-        Overall_height = float(request.form.get('overall-height')),
+        Relative_Compactness = float(request.form.get('compactness')),
+        Surface_Area = float(request.form.get('surface-area')),
+        Wall_Area= float(request.form.get('wall-area')),
+        Roof_Area = float(request.form.get('roof-area')),
+        Overall_Height = float(request.form.get('overall-height')),
         Orientation = float(request.form.get('orientation')),
-        Glazing_area = float(request.form.get('glazing-area:')),
-        Glazing_distribution= float(request.form.get('glazing_distribution')),
+        Glazing_Area = float(request.form.get('glazing-area')),
+        Glazing_Area_Distribution= float(request.form.get('glazing-distribution')),
         
         )
         
         final_new_data=data.get_data_as_dataframe()
+        print(final_new_data)
         predict_pipeline=PredictPipeline()
         pred=predict_pipeline.predict(final_new_data)
 
-        results=round(pred[0],2)'''
+        results=round(pred[0],2)
 
-        return render_template('results.html')#final_result=data)   
+        return render_template('results.html', final_result=data)   
 
 
 
