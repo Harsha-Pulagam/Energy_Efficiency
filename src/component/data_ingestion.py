@@ -24,7 +24,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Initiating Data Ingestion process...")
         try:
-            df = pd.read_excel(os.path.join('notebooks/data', 'ENB2012_data.xlsx'))
+            df = pd.read_excel(os.path.join('notebooks/data', 'ENB2012_data.xlsx')) # notebooks/data /ENB2012_data.xlsx
             logging.info("Dataset loaded as Pandas DataFrame Successfully")
 
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path), exist_ok=True) # If exist_ok = False then it will raise error.
@@ -47,9 +47,9 @@ class DataIngestion:
             raise CustomException(e, sys)
         
 
-#---------------------------------
-# Run Test for Data Ingestion:
+# #---------------------------------
+# # Run Test for Data Ingestion:
 
-if __name__ == "__main__":
-    obj = DataIngestion()
-    train_data, test_data = obj.initiate_data_ingestion()
+# if __name__ == "__main__":
+#     obj = DataIngestion()
+#     train_data, test_data = obj.initiate_data_ingestion()
