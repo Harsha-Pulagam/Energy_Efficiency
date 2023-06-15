@@ -1,3 +1,6 @@
 /Energy_Efficiency.egg-info
 /ee_venv
 /logs
+/__pycache__
+/dummy_component
+
