@@ -2,7 +2,7 @@ from setuptools import find_packages,setup
 from typing import List
 
 
-HYPEN_E_DOT='-e .' # Triggers setup.py file... we will not keep it in requirements... 
+HYPEN_E_DOT='-e .' # Triggers setup.py file... we will not count is as library it in requirements... 
 
 def get_requirements(file_path:str)->List[str]:
     requirements=[]

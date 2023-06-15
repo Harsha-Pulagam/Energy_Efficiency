@@ -14,5 +14,7 @@
 CSV files are more portable than Excel files. CSV files can be easily opened and read by a wide variety of software applications, including spreadsheets, statistical software, and machine learning frameworks. Excel files, on the other hand, can only be opened and read by Microsoft Excel. This makes CSV files more portable and easier to share with others.
 Excel files offer more features for data analysis and visualization. So our main aim is to do the prediction so after train and test split we will store data in the form of CSV....
 
-3. At the intial stages make sure you create a venv and run requirments.txt with -e . so... your project will be created as package.
+3. At the initial stages make sure you create a venv and run requirements.txt with -e . so... your project will be created as package.
+
+4. 
 
