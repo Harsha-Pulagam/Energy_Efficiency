@@ -25,7 +25,7 @@ class PredictPipeline:
             
 
         except Exception as e:
-            logging.info("Exception occured in prediction")
+            logging.info("Exception occurred in prediction")
             raise CustomException(e,sys)
 
 # Taking input from user:

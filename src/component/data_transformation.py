@@ -65,8 +65,8 @@ class DataTransformation:
 
             preprocessing_obj = self.get_data_transformation_object()
 
-            target_column_name = ['Y1', 'Y2'] # 'Y1'
-            drop_columns = [target_column_name]
+            target_column_name = 'Y1'
+            drop_columns = [target_column_name, 'Y2']
 
             input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
             target_feature_train_df=train_df[target_column_name]

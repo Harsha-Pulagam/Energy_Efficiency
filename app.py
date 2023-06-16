@@ -25,7 +25,7 @@ def hello_world():
         final_new_data=data.get_data_as_dataframe()
         print(final_new_data)
         predict_pipeline=PredictPipeline()
-        pred=predict_pipeline.predict(final_new_data)
+        pred=predict_pipeline.predict(features=final_new_data)
 
         # results=round(pred[0],2)
 
