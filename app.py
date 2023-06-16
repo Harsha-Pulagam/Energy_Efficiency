@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request,jsonify
+import os
 from src.pipeline.prediction_pipeline import CustomData,PredictPipeline
 
 app = Flask(__name__)
@@ -25,11 +26,13 @@ def hello_world():
         final_new_data=data.get_data_as_dataframe()
         print(final_new_data)
         predict_pipeline=PredictPipeline()
-        pred=predict_pipeline.predict(features=final_new_data)
-
+        heating_model_path = os.path.join('artifacts', 'model_for_heating.pkl')
+        cooling_model_path = os.path.join('artifacts', 'model_for_cooling.pkl')
+        heating_load =predict_pipeline.predict(features=final_new_data, model_path=heating_model_path)
+        cooling_load = predict_pipeline.predict(features=final_new_data, model_path=cooling_model_path)
         # results=round(pred[0],2)
 
-        return render_template('results.html', final_result=pred)   
+        return render_template('results.html', heating_load=heating_load, cooling_load=cooling_load)   
 
 
 

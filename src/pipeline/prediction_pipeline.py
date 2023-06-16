@@ -10,17 +10,17 @@ class PredictPipeline:
     def __init__(self):
         pass
 
-    def predict(self,features):
+    def predict(self,features, model_path):
         try:
             preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
-            model_path=os.path.join('artifacts','model.pkl')
+            #model_path=os.path.join('artifacts','model.pkl')
 
             preprocessor=load_object(preprocessor_path)
             model=load_object(model_path)
 
             data_scaled=preprocessor.transform(features)
 
-            pred=model.predict(data_scaled)
+            pred= model.predict(data_scaled)
             return pred
             
 
