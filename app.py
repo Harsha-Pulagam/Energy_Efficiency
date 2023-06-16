@@ -11,14 +11,14 @@ def hello_world():
     else:
 
         data=CustomData(
-        Relative_Compactness = float(request.form.get('compactness')),
-        Surface_Area = float(request.form.get('surface-area')),
-        Wall_Area= float(request.form.get('wall-area')),
-        Roof_Area = float(request.form.get('roof-area')),
-        Overall_Height = float(request.form.get('overall-height')),
-        Orientation = float(request.form.get('orientation')),
-        Glazing_Area = float(request.form.get('glazing-area')),
-        Glazing_Area_Distribution= float(request.form.get('glazing-distribution')),
+        X1 = float(request.form.get('compactness')),
+        X2 = float(request.form.get('surface-area')),
+        X3 = float(request.form.get('wall-area')),
+        X4 = float(request.form.get('roof-area')),
+        X5 = float(request.form.get('overall-height')),
+        X6 = float(request.form.get('orientation')),
+        X7 = float(request.form.get('glazing-area')),
+        X8 = float(request.form.get('glazing-distribution')),
         
         )
         
@@ -27,9 +27,9 @@ def hello_world():
         predict_pipeline=PredictPipeline()
         pred=predict_pipeline.predict(final_new_data)
 
-        results=round(pred[0],2)
+        # results=round(pred[0],2)
 
-        return render_template('results.html', final_result=data)   
+        return render_template('results.html', final_result=pred)   
 
 
 

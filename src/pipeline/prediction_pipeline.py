@@ -32,36 +32,37 @@ class PredictPipeline:
 
 class CustomData:
     def __init__(self,
-                 Relative_Compactness: float,
-                 Surface_Area: float,
-                 Wall_Area: float,
-                 Roof_Area: float,
-                 Overall_Height: float,
-                 Orientation: int,
-                 Glazing_Area: float,
-                 Glazing_Area_Distribution: int):
+                 X1:float,
+                 X2:float,
+                 X3:float,
+                 X4:float,
+                 X5:float,
+                 X6:int,
+                 X7:float,
+                 X8:int):
         
-        self.X1 = Relative_Compactness
-        self.X2 = Surface_Area
-        self.X3 = Wall_Area
-        self.X4 = Roof_Area
-        self.X5 = Overall_Height
-        self.X6 = Orientation
-        self.X7 = Glazing_Area
-        self.X8 = Glazing_Area_Distribution
+        self.X1 = X1
+        self.X2 = X2
+        self.X3 = X3
+        self.X4 = X4
+        self.X5 = X5
+        self.X6 = X6
+        self.X7 = X7
+        self.X8 = X8
+
 
 
     def get_data_as_dataframe(self):
         try:
             CustomData = {
-                'Relative Compactness': [self.X1],
-                'Surface Area': [self.X2],
-                'Wall Area': [self.X3],
-                'Roof Area': [self.X4],
-                'Overall Height': [self.X5],
-                'Orientation': [self.X6],
-                'Glazing Area': [self.X7],
-                'Glazing Area Distribution': [self.X8]
+                'X1': [self.X1],
+                'X2': [self.X2],
+                'X3': [self.X3],
+                'X4': [self.X4],
+                'X5': [self.X5],
+                'X6': [self.X6],
+                'X7': [self.X7],
+                'X8': [self.X8]
             }
 
             df = pd.DataFrame(CustomData)
