@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Building Information Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Energy_Efficiency</h1>
+    <form action="/" method="POST">
+      <div class="form-group">
+        <label for="compactness">Compactness:</label>
+        <input type="text" id="compactness" name="compactness">
+      </div>
+
+      <div class="form-group">
+        <label for="surface-area">Surface Area:</label>
+        <input type="text" id="surface-area" name="surface-area">
+      </div>
+
+      <div class="form-group">
+        <label for="wall-area">Wall Area:</label>
+        <input type="text" id="wall-area" name="wall-area">
+      </div>
+
+      <div class="form-group">
+        <label for="roof-area">Roof Area:</label>
+        <input type="text" id="roof-area" name="roof-area">
+      </div>
+
+      <div class="form-group">
+        <label for="overall-height">Overall Height:</label>
+        <input type="text" id="overall-height" name="overall-height">
+      </div>
+
+      <div class="form-group">
+        <label for="orientation">Orientation:</label>
+        <input type="text" id="orientation" name="orientation">
+      </div>
+
+      <div class="form-group">
+        <label for="glazing-area">Glazing Area:</label>
+        <input type="text" id="glazing-area" name="glazing-area">
+      </div>
+
+      <div class="form-group">
+        <label for="glazing-distribution">Glazing Area Distribution:</label>
+        <input type="text" id="glazing-distribution" name="glazing-distribution">
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
