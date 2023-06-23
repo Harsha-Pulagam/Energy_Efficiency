@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 
 from dataclasses import dataclass
 
-## intitialize the Data Ingestion configuration
+## initialize the Data Ingestion configuration: 
 
 @dataclass
 class DataIngestionconfig:
@@ -21,6 +21,7 @@ class DataIngestion:
         self.ingestion_config=DataIngestionconfig()
         
     def initiate_data_ingestion(self):
+        """returns paths of train and test data after splitting the given dataset"""
         logging.info('Data Ingestion Method starts')
         
         try:

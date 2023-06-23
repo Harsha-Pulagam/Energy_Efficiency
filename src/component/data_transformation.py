@@ -25,6 +25,8 @@ class DataTransformation:
         self.data_transformation_config=DataTransformationConfig()
 
     def get_data_transformation_object(self):
+        """Returns Preprocessor object for the data transformation"""
+
         try:
             logging.info('Data Transformation initiated')
             
@@ -52,6 +54,7 @@ class DataTransformation:
             raise CustomException(e,sys)
         
     def initiate_data_transformation(self,train_path,test_path):
+        """Transforms data for training the model for Heating Load as Target variable and saves preprocessor objects as .pkl file in prediction pipeline"""
         try:
             # Reading train and test data
             train_df = pd.read_csv(train_path)
@@ -105,6 +108,7 @@ class DataTransformation:
         
 
     def initiate_data_transformation_for_cooling(self,train_path,test_path):
+        """ Transforms data for training the model for cooling Load as Target variable and saves preprocessor objects as .pkl file in prediction pipeline"""
         try:
             # Reading train and test data
             train_df = pd.read_csv(train_path)

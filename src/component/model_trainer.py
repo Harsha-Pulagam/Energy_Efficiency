@@ -20,8 +20,9 @@ class ModelTrainerConfig:
 class ModelTrainer:
     def __init__(self):
         self.model_trainer_config = ModelTrainerConfig()
-
+## For Heating Load:
     def initiate_model_training(self,train_array,test_array):
+        """Trains model for Heating Load and saves best model in .pkl file format"""
         try:
             # print(train_array)
             logging.info('Splitting Dependent and Independent variables from train and test data')
